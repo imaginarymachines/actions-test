@@ -13,8 +13,8 @@ jobs:
         env:
           PLUGIN_MACHINE_TOKEN: ${{ secrets.PLUGIN_MACHINE_TOKEN }}
         run: |
-          npx plugin-machine plugin build "$env:PLUGIN_MACHINE_TOKEN"
-          npx plugin-machine plugin zip "$env:PLUGIN_MACHINE_TOKEN"
+          npx plugin-machine plugin build --token="$env:PLUGIN_MACHINE_TOKEN"
+          npx plugin-machine plugin zip --token="$env:PLUGIN_MACHINE_TOKEN"
 
       - name: 'Upload ZIP'
         uses: actions/upload-artifact@v2
