@@ -1,0 +1,25 @@
+{
+    "slug": "action-test",
+    "pluginId": 180,
+    "buildId": 199,
+    "entryPoints": {
+        "adminPages": [],
+        "blocks": []
+    },
+    "buildIncludes": [
+        "action-test.php",
+        "readme.txt",
+        "php",
+        "vendor",
+        "build",
+        "inc"
+    ],
+    "buildSteps": {
+        "dev": [
+            "composer install"
+        ],
+        "prod": [
+            "composer install --no-dev"
+        ]
+    }
+}
