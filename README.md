@@ -13,7 +13,6 @@ This plugin tests the Plugin Machine Github Action.
 - Install php dependencies
     - `composer install`
 
-
 ## Working With PHP
 
 ### Autoloader
