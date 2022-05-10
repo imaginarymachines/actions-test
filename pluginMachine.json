@@ -22,7 +22,7 @@
             "yarn start"
         ],
         "prod": [
-            "composer install --no-dev",
+            "composer install --no-dev"
         ]
     }
 }
