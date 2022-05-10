@@ -12,7 +12,7 @@ jobs:
 
       - name: Zip
         id: pluginmachine
-        uses: imaginarymachines/builder-action@831a90413d3a1032c73675813e57f4048b0d6b37
+        uses: imaginarymachines/builder-action@main
         with:
           token:  ${{ secrets.PLUGIN_MACHINE_TOKEN }}
           pluginDir: ${{ github.workspace }}
