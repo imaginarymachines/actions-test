@@ -1,10 +1,11 @@
 {
     "slug": "action-test",
-    "pluginId": 180,
-    "buildId": 199,
+    "pluginId": 247,
+    "buildId": 272,
     "entryPoints": {
         "adminPages": [],
-        "blocks": []
+        "blocks": [
+        ]
     },
     "buildIncludes": [
         "action-test.php",
@@ -12,14 +13,16 @@
         "php",
         "vendor",
         "build",
-        "inc"
+        "inc",
     ],
     "buildSteps": {
         "dev": [
-            "composer install"
+            "composer install",
+            "yarn",
+            "yarn start"
         ],
         "prod": [
-            "composer install --no-dev"
+            "composer install --no-dev",
         ]
     }
 }
