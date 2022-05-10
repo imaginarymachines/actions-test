@@ -1,7 +1,7 @@
 name: Build and Zip
 on: push
 jobs:
-  test:
+  cli:
 
     runs-on: ubuntu-latest
     steps:
@@ -15,9 +15,19 @@ jobs:
         run: |
           npx plugin-machine plugin build --token="$env:PLUGIN_MACHINE_TOKEN"
           npx plugin-machine plugin zip --token="$env:PLUGIN_MACHINE_TOKEN"
+          npx plugin-machine upload --token="$env:PLUGIN_MACHINE_TOKEN"
+  action:
 
-      - name: 'Upload ZIP'
-        uses: actions/upload-artifact@v2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Node version
+        run: node -v
+
+      - name: Zip
+        uses: imaginarymachines/builder-action@831a90413d3a1032c73675813e57f4048b0d6b37
         with:
-          name: action-test.zip
-          path: action-test.zip
+          token:  ${{ secrets.PLUGIN_MACHINE_TOKEN }}
+          pluginDir: ${{ github.workspace }}
+
+          
