@@ -15,6 +15,7 @@ This plugin tests the Plugin Machine Github Action.
 
 ## Working With PHP
 
+
 ### Autoloader
 
 PHP classes should be located in the "php" directory and follow the [PSR-4 standard](https://www.php-fig.org/psr/psr-4/).
