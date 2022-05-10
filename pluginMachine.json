@@ -1,28 +1,31 @@
 {
-    "slug": "action-test",
-    "pluginId": 247,
-    "buildId": 272,
-    "entryPoints": {
-        "adminPages": [],
-        "blocks": [
-        ]
-    },
-    "buildIncludes": [
-        "action-test.php",
-        "readme.txt",
-        "php",
-        "vendor",
-        "build",
-        "inc",
-    ],
-    "buildSteps": {
-        "dev": [
-            "composer install",
-            "yarn",
-            "yarn start"
-        ],
-        "prod": [
-            "composer install --no-dev"
-        ]
-    }
+   "slug":"action-test",
+   "pluginId":247,
+   "buildId":272,
+   "entryPoints":{
+      "adminPages":[
+         
+      ],
+      "blocks":[
+         
+      ]
+   },
+   "buildIncludes":[
+      "action-test.php",
+      "readme.txt",
+      "php",
+      "vendor",
+      "build",
+      "inc"
+   ],
+   "buildSteps":{
+      "dev":[
+         "composer install",
+         "yarn",
+         "yarn start"
+      ],
+      "prod":[
+         "composer install --no-dev"
+      ]
+   }
 }
