@@ -11,7 +11,7 @@ jobs:
         run: node -v
 
       - name: Zip
-        id: plugin-machine
+        id: pluginmachine
         uses: imaginarymachines/builder-action@831a90413d3a1032c73675813e57f4048b0d6b37
         with:
           token:  ${{ secrets.PLUGIN_MACHINE_TOKEN }}
