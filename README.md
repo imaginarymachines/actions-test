@@ -4,7 +4,6 @@ This plugin tests the Plugin Machine Github Action.
 
 [![Built With Plugin Machine](https://img.shields.io/badge/Built%20With-Plugin%20Machine-lightgrey)](https://pluginmachine.com)
 
-
 ## Installation
 
 - Git clone:
