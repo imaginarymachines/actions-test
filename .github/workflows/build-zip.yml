@@ -16,6 +16,7 @@ jobs:
         with:
           token:  ${{ secrets.PLUGIN_MACHINE_TOKEN }}
           pluginDir: ${{ github.workspace }}
+          commentPr: true
       - name: URL
         run: echo ${{steps.pluginmachine.outputs.upload}}
       # Get PR number
