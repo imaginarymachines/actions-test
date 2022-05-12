@@ -1,9 +1,7 @@
 name: Build and Zip
 on: pull_request
 jobs:
-
   action:
-
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,19 +14,8 @@ jobs:
         with:
           token:  ${{ secrets.PLUGIN_MACHINE_TOKEN }}
           pluginDir: ${{ github.workspace }}
+          commentPr: true
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: URL
         run: echo ${{steps.pluginmachine.outputs.upload}}
-      # Get PR number
-      - uses: jwalton/gh-find-current-pr@v1
-        id: finder
-      # Comment on PR
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            await github.rest.issues.createComment({
-              issue_number: ${{ steps.finder.outputs.pr }},
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "Link: ${{steps.pluginmachine.outputs.upload}}"
-            })
-  
+      
