@@ -1,6 +1,6 @@
 # action-test
 
-This plugin tests the Plugin Machine Github Action.
+This plugin tests the [Plugin Machine Github Action](https://github.com/imaginarymachines/builder-action)
 
 [![Built With Plugin Machine](https://img.shields.io/badge/Built%20With-Plugin%20Machine-lightgrey)](https://pluginmachine.com)
 
