@@ -12,9 +12,9 @@ jobs:
         id: pluginmachine
         uses: imaginarymachines/builder-action@main
         with:
-          token:  ${{ secrets.PLUGIN_MACHINE_TOKEN }}
-          pluginDir: ${{ github.workspace }}
-          commentPr: true
+          PLUGIN_MACHINE_TOKEN:  ${{ secrets.PLUGIN_MACHINE_TOKEN }}
+          PLUGIN_DIR: ${{ github.workspace }}
+          COMMENT_PR: true
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: URL
         run: echo ${{steps.pluginmachine.outputs.upload}}
